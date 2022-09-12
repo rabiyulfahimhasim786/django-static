@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<!--<link rel="stylesheet" href="{% static 'css/img.css' %}">!-->
+</head>
+<body>
+    {% if emp_list %}
+    <table>
+    {% for employee in emp_list  %}
+    <tr>
+    <td>{{emp_list.employeeNo}}</td>
+    <td>{{emp_list.employeeName}}</td>
+    <td>{{emp_list.employeeSalary}}</td>
+    <td>{{emp_list.employeeAddress}}</td>
+    </tr>
+    {% end for %}
+    {% end if %}
+    </table>
+</body>
+</html>
